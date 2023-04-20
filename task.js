@@ -1,26 +1,23 @@
 "use strict";
 
-
+//Задача №1
 function solveEquation(a, b, c) {
   let arr = [];
   let total = (b ** 2) - 4 * a * c;
-  
-  if (total < 0) {
-    arr = [];
-  } else if (total === 0) {
-    arr = [-b / ( 2 * a )];
-  } else {
-    arr = [(-b + Math.sqrt(total) ) / (2*a), (-b - Math.sqrt(total) ) / (2*a)];
+
+  if (total === 0) {
+    arr = [-b / (2 * a)];
+  } else if (total > 0) {
+    arr = [(-b + Math.sqrt(total)) / (2 * a), (-b - Math.sqrt(total)) / (2 * a)]
+    ;
   }
 
   return arr;
 }
 
+solveEquation(1,2,4);
 
-
-
-
-
+//Задача №2
 function calculateTotalMortgage(percent, contribution, amount, countMonths) {  
   
   percent = percent/100/12;
@@ -32,7 +29,3 @@ function calculateTotalMortgage(percent, contribution, amount, countMonths) {
 
   return totalPay;
 }
-
-
-
-
